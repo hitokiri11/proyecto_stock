@@ -1,0 +1,7 @@
+{
+    "name": "prueba",
+    "version": "0.1.0",
+    "description": "apiDoc de la app prueba",
+    "title": "ApiDoc Prueba",
+    "url" : "https://api.github.com/v1"
+}
