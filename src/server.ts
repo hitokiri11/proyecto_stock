@@ -24,7 +24,7 @@ class Server {
       "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
     //mongoose.set("useFindAndModify", true);
     mongoose
-      .connect(stock, { "useFindAndModify": false })
+      .connect(stock)
       .then((db) => console.log("Connected to database"))
       .catch((err) => {
         console.error(`Error connecting to the database. \n${err}`);
