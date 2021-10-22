@@ -33,7 +33,7 @@ export async function createOrdenesServices(orden: IOrdenes){
 
 export async function updateOrdenesServices(id: ObjectId, orden: IOrdenes){
     try{
-        await  Ordenes.findOneAndUpdate({_id: id, orden});
+        await  Ordenes.update({_id: id},{$set: orden});
         return orden;
     }catch(error: any){
         console.log(error);

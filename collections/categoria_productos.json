@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "612ef02c1404429b4173d1a9"
+  },
+  "descripcion": "laptops",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612ef0981404429b4173d1ab"
+  },
+  "descripcion": "smart phones",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612ef0af1404429b4173d1ad"
+  },
+  "descripcion": "desktops",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612ef0be1404429b4173d1af"
+  },
+  "descripcion": "servers",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "612ef1799eaa0211b48543f5"
+  },
+  "descripcion": "tablets",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "616d150b294292415281c55f"
+  },
+  "descripcion": "smart watch",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "616e4fce608b954a0213a0f2"
+  },
+  "descripcion": "hd",
+  "__v": 0
+}]

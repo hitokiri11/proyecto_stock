@@ -1,7 +1,11 @@
 import {Request, Response} from "express";
 import Ordenes, {IOrdenes} from "../models/ordenes.model";
+import Producto, {IProductos} from "../models/productos.model";
 import Ventas, {IVentas} from '../models/ventas.model';
-import {getProductosServices} from "../services/productos.service";
+import {
+    getProductosServices,
+    updateProductosServices
+} from "../services/productos.service";
 import {
     createVentasServices
 } from "../services/ventas.service";
@@ -55,6 +59,7 @@ export async function createOrdenesController(req: Request, res: Response){
             
             if(detalle_producto){
                 let cantidad_p = (detalle_producto.cantidad - cantidadd[i]);//valor que se debe actualizar en la tabla productos
+                await Producto.update({_id: productoo[i]},{$set: {cantidad: cantidad_p}});
 
                 precio      = detalle_producto.precio;
                 monto       = (precio * cantidadd[i]);

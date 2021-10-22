@@ -56,7 +56,7 @@ exports.createOrdenesServices = createOrdenesServices;
 function updateOrdenesServices(id, orden) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield ordenes_model_1.default.findOneAndUpdate({ _id: id, orden });
+            yield ordenes_model_1.default.update({ _id: id }, { $set: orden });
             return orden;
         }
         catch (error) {

@@ -54,7 +54,7 @@ exports.createProductosServices = createProductosServices;
 function updateProductosServices(id, producto) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield productos_model_1.default.findOneAndUpdate({ _id: id, producto });
+            yield productos_model_1.default.update({ _id: id }, { $set: producto });
             return producto;
         }
         catch (error) {

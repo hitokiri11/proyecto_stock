@@ -22,7 +22,7 @@ class Server {
     config() {
         //connection mongodb atlas
         const stock = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
-        //mongoose.set("useFindAndModify", false);
+        //mongoose.set("useFindAndModify", true);
         mongoose_1.default
             .connect(stock)
             .then((db) => console.log("Connected to database"))

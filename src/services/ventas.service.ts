@@ -32,7 +32,7 @@ export async function createVentasServices(venta: IVentas){
 
 export async function updateVentasServices(id: ObjectId, venta: IVentas){
     try{
-        await  Ventas.findOneAndUpdate({_id: id, venta});
+        await  Ventas.update({_id: id},{$set: venta});
         return venta;
     }catch(error: any){
         console.log(error);

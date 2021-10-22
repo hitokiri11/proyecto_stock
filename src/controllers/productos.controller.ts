@@ -30,8 +30,8 @@ export async function getProductosController(req: Request, res: Response){
 
 export async function createProductosController(req: Request, res: Response){
     try{
-        const {descripcion, precio, cateroria, cantidad} = req.body;
-        const new_productos: IProductos = new Productos({descripcion, precio, cateroria, cantidad});
+        const {descripcion, precio, categoria, cantidad} = req.body;
+        const new_productos: IProductos = new Productos({descripcion, precio, categoria, cantidad});
         await createProductosServices(new_productos);
         res.jsonp(new_productos);
     }catch(error: any){

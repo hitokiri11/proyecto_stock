@@ -31,7 +31,7 @@ export async function createProductosServices(producto: IProductos){
 
 export async function updateProductosServices(id: ObjectId, producto: IProductos){
     try{
-        await  Productos.findOneAndUpdate({_id: id, producto});
+        await  Productos.update({_id: id},{$set: producto});
         return producto;
     }catch(error: any){
         console.log(error);

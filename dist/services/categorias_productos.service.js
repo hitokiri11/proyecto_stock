@@ -54,7 +54,7 @@ exports.createCatProductServices = createCatProductServices;
 function updateCatProductServices(id, catproduct) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield categorias_productos_model_1.default.findOneAndUpdate({ _id: id, catproduct });
+            yield categorias_productos_model_1.default.update({ _id: id }, { $set: catproduct });
             return catproduct;
         }
         catch (error) {

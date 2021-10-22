@@ -54,7 +54,7 @@ exports.createVentasServices = createVentasServices;
 function updateVentasServices(id, venta) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield ventas_model_1.default.findOneAndUpdate({ _id: id, venta });
+            yield ventas_model_1.default.update({ _id: id }, { $set: venta });
             return venta;
         }
         catch (error) {

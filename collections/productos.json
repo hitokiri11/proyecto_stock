@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "613034cc06945da39f8a0244"
+  },
+  "descripcion": "Lenovo",
+  "precio": 750.25,
+  "cantidad": 42,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "613034ff06945da39f8a0246"
+  },
+  "descripcion": "Samsung s11",
+  "precio": {
+    "$numberDecimal": "1050.25"
+  },
+  "cantidad": 30,
+  "__v": 0
+}]

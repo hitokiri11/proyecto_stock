@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteOrdenesController = exports.updateOrdenesController = exports.createOrdenesController = exports.getOrdenesController = exports.getOrdenesAllController = void 0;
 const ordenes_model_1 = __importDefault(require("../models/ordenes.model"));
+const productos_model_1 = __importDefault(require("../models/productos.model"));
 const ventas_model_1 = __importDefault(require("../models/ventas.model"));
 const productos_service_1 = require("../services/productos.service");
 const ventas_service_1 = require("../services/ventas.service");
@@ -61,6 +62,7 @@ function createOrdenesController(req, res) {
                 const detalle_producto = yield (0, productos_service_1.getProductosServices)(new mongodb_1.ObjectId(productoo[i]));
                 if (detalle_producto) {
                     let cantidad_p = (detalle_producto.cantidad - cantidadd[i]); //valor que se debe actualizar en la tabla productos
+                    yield productos_model_1.default.update({ _id: productoo[i] }, { $set: { cantidad: cantidad_p } });
                     precio = detalle_producto.precio;
                     monto = (precio * cantidadd[i]);
                     monto_neto = monto - (monto * 0.15);

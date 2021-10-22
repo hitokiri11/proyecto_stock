@@ -44,8 +44,8 @@ exports.getProductosController = getProductosController;
 function createProductosController(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const { descripcion, precio, cateroria, cantidad } = req.body;
-            const new_productos = new productos_model_1.default({ descripcion, precio, cateroria, cantidad });
+            const { descripcion, precio, categoria, cantidad } = req.body;
+            const new_productos = new productos_model_1.default({ descripcion, precio, categoria, cantidad });
             yield (0, productos_service_1.createProductosServices)(new_productos);
             res.jsonp(new_productos);
         }
