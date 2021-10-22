@@ -4,7 +4,6 @@ import Producto, {IProductos} from "../models/productos.model";
 import Ventas, {IVentas} from '../models/ventas.model';
 import {
     getProductosServices,
-    updateProductosServices
 } from "../services/productos.service";
 import {
     createVentasServices
@@ -17,9 +16,6 @@ import {
     updateOrdenesServices,
     deleteOrdenesServices
 } from "../services/ordenes.service";
-
-let venta:any = null;
-let arrOrdenes:any[] =[]; 
 
 export async function getOrdenesAllController(req: Request, res: Response){
     try{
@@ -65,8 +61,7 @@ export async function createOrdenesController(req: Request, res: Response){
                 monto       = (precio * cantidadd[i]);
                 monto_neto  = monto - (monto * 0.15);
             }
-            console.log("cantidad ");
-            console.log(cantidadd[i]);
+
             let cantidad = cantidadd[i];
             let producto = productoo[i];
 
